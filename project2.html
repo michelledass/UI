@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Navbar</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Poppins font to the entire body */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        /* Background image container */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75%;
+            background: url("P2IMG/Cover.png") no-repeat center center/cover;
+            z-index: -1;
+        }
+
+        /* Style for the navbar container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
+            position: relative;
+            width: 100%;
+            background: transparent;
+        }
+
+        /* Style for buttons */
+        .left-button,
+        .right-button {
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        .left-button:hover,
+        .right-button:hover {
+            opacity: 0.8;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style for the right buttons container */
+        .right-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Container below the image */
+
+        .container {
+            display: flex;
+
+            align-items: left;
+            /* Vertically center the text */
+            width: 100%;
+
+        }
+
+        .section {
+            padding: 50px;
+            margin-top: 20px;
+        }
+
+
+        .section h4 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+
+        }
+
+        .section p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #555;
+            /* Text color */
+        }
+
+        /* At-a-Glance Section */
+        .at-a-glance {
+            margin-top: 30%;
+            text-align: left;
+
+            padding-left: 200px;
+            /* Add padding to the left */
+            padding-right: 200px;
+
+        }
+
+
+        .at-a-glance h2 {
+            font-size: 2em;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        .at-a-glance h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .at-a-glance p {
+            margin: 10px 0 0;
+            font-size: 1em;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar {
+                padding: 20px 30px;
+            }
+
+            .at-a-glance {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .at-a-glance {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .container {
+                flex-direction: column;
+                /* Stack items vertically on smaller screens */
+            }
+
+            .section {
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .right-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .at-a-glance {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .at-a-glance {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section {
+                padding: 10px;
+                text-align: left;
+            }
+
+            .right-buttons {
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-image"></div>
+
+    <div class="navbar">
+        <button class="left-button">Dalrine</button>
+        <div class="right-buttons">
+            <button class="right-button">About</button>
+            <button class="right-button">Projects</button>
+            <button class="right-button">Resume</button>
+        </div>
+    </div>
+
+    <div class="at-a-glance">
+        <div>
+            <h2>At-a-Glance</h2>
+            <p><strong>Project Type:</strong> Website Redesign</p>
+            <p><strong>Focus:</strong> Enhance onboarding clarity, visual harmony, and emotional connection through
+                thoughtful UI/UX improvements.</p>
+            <p><strong>Primary Goal:</strong> Redesign the Penzu app to offer a calm, emotionally engaging, and
+                user-friendly
+                journaling experience.</p>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h3>Timeline</h3>
+                <p>2 Weeks</p>
+            </div>
+            <div class="section">
+                <h3>My Role</h3>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="section">
+                <h3>Platform</h3>
+                <p>Figma</p>
+            </div>
+        </div>
+        <div>
+            <h2>Problem</h2>
+            <p>
+                <strong>1. </strong> The app’s interface lacked visual harmony and a calming design suited for
+                journaling.
+            </p>
+
+            <p> <strong>2. </strong>The onboarding screen felt outdated, cluttered, and disconnected from the app’s
+                purpose.</p>
+            <p> <strong>3. </strong>Users experienced low emotional connection and found the app uninviting.</p>
+            <p> <strong>4. </strong>Limited feature visibility led to poor engagement and low user retention.
+            </p>
+        </div>
+        <div>
+            <h2>Solution</h2>
+            <p> <strong>1. </strong>Redesigned the onboarding screen with a clean, calming visual layout using a soft
+                blue color palette.</p>
+            <p> <strong>2. </strong>Simplified the sign-in/sign-up flow with improved button hierarchy and clear CTAs.
+            </p>
+            <p> <strong>3. </strong>Created a consistent design system to enhance usability and visual identity across
+                the app.
+            </p>
+            <p> <strong>4. </strong>Focused on emotional design to build a stronger personal connection and increase
+                user engagement.
+            </p>
+            <br>
+            <br>
+
+            <p>This video showcases the UI/UX redesign of the Penzu journaling app.
+                Focused on creating a calm and emotionally engaging experience, the new design improves onboarding
+                clarity, button hierarchy, and overall visual harmony.
+                Watch how we transformed the user journey from cluttered and outdated to clean, intuitive, and
+                welcoming.
+            </p>
+            <br>
+            <br>
+
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <video controls width="30%">
+                    <source src="P2IMG/ProtoType1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div>
+            <h2>Process</h2>
+            <img src="P2IMG/process.png" alt="Process" width="98%">
+        </div>
+        <div>
+            <h2>Persona</h2>
+            <img src="P2IMG/persona.png" alt="Persona" width="98%">
+
+        </div>
+        <div>
+            <h2>User Journey Map</h2>
+            <img src="P2IMG/user journey map.png" alt="User Journey Map" width="98%">
+        </div>
+        <div>
+            <!-- <h2>Paper First</h2>
+            <p>Initial sketches and wireframes to define key features, such as simplified categories and
+                product
+                pages</p>
+            <img src="project1images/paperprototype.png" alt="Paper ProtoType" width="98%">
+        </div> -->
+            <div>
+                <h2> Wireframes</h2>
+                <!-- <p>
+                Using Figma, paper sketches were converted into wireframes and later into high-fidelity
+                prototypes
+            </p>-->
+                <h3>Low-Fidelity</h3>
+                <img src="P2IMG/lowfidelity.png" alt="Wireframes" width="98%">
+                <h3>High-fidelity</h3>
+                <br>
+                <img src="P2IMG/highfidelity.png" alt="high-fidelity ProtoType" width="98%">
+
+            </div>
+
+            <div>
+                <h2>Design System</h2>
+                <P>
+                <ul>
+                    <li> <strong>Color Palette:</strong> Calming, Universally Appealing & Trustworthy tones.<br>
+
+                        Calming & Trustworthy: Blue evokes feelings of peace, stability, and reliability—ideal for apps
+                        meant for writing, reflection, or emotional sharing.<br>
+
+                        Universally Appealing: Blue is one of the most liked colors globally, making the design feel
+                        accessible and comforting to many.
+
+                        <br>
+
+                        Clarity & Focus: Blue tones support a clean look that doesn’t overwhelm, making it easier to
+                        read and engage with the content.<br>
+
+                        <br>
+                        <strong>Monochromatic</strong>
+                        #4B86B4 – Deep Blue (Primary action and CTAs) #A6C8E2 – Soft Blue #D2E6F4 – Light Blue #E3F2FD –
+                        Very Light Blue These colors maintain a calm, cohesive tone while allowing for clear visual
+                        hierarchy and focus areas. .<br>
+                    </li><br>
+
+
+                    <li> <strong>Typography:</strong>
+                        Playfair Display-A serif font used for its elegant, emotional, and readable style.
+
+                    </li><br>
+
+                    <li><strong> Icons & Imagery:</strong> Minimal line-style icon.<br>
+                    </li>
+                </ul>
+                </p>
+                <div>
+                    <h2>Design Changes</h2>
+                    <h3>Clean, Intuitive Layout</h3>
+                    <p>
+                    <ul>
+                        <li>Modern, minimal UI with calming visuals</li>
+
+                    </ul>
+                    </p>
+
+                    <img src="P2IMG/design changes.png" alt="Design Changes" width="98%">
+                    <h3>Revamped Record Page</h3>
+                    <p>
+                    <ul>
+                        <li>Clean and structured layout</li>
+                        <li>Improved typography and spacing for better readability</li>
+                    </ul>
+                    </p>
+                    <img src="P2IMG/design changes2.png" alt="Design Changes" width="98%">
+                    <h3>New Feature Additions</h3>
+                    <p>
+                    <ul>
+                        <li>Text alignment options (left, center, right)</li>
+                        <li>Font selection and size adjustment</li>
+                        <li>Background customization (colors, patterns)</li>
+                        <li>Added stickers and mood tags for expressive journaling</li>
+                    </ul>
+                    </p>
+                    <img src="P2IMG/design changes3.png" alt="Design Changes" width="98%">
+                    <img src="P2IMG/design changes4.png" alt="Design Changes" width="98%">
+                </div>
+
+                <div>
+                    <h2>User Testing (A/B Testing for Redesign)</h2>
+                    <p>Conducted A/B testing on two versions of the Record Page and Sign In/Sign Up screens.<br>
+                        <br>
+                    <p>Tested visual changes like font type (Playfair), color palette (monochrome blues),
+                        and added features (text alignment, stickers, background themes).<br>
+                        <br>
+                    <p>Shared mockups with a small group of users and collected feedback via Google Forms and user
+                        interviews.<br>
+                        <br>
+                    <p>Measured engagement (scroll rate, time spent, feature usage) to compare responses to original vs.
+                        redesigned versions.<br>
+                        <br>
+                    </p>
+
+                    <h3>Key Findings from A/B Testing:</h3>
+                    <p>
+                    <ul>
+
+                        <li>Users preferred the monochromatic blue theme for its calming and focused mood.
+
+                        </li>
+
+                        <li>The new font and alignment options improved readability and writing comfort.</li>
+                        <li>Majority of users found the sticker and background features fun and expressive.</li>
+                        <li>The updated Sign In/Sign Up flow led to a smoother onboarding experience.</li>
+                        <li>Usability score improved with clearer navigation and better layout structure.
+
+                        </li>
+                    </ul>
+                    </p>
+                    <h2>Key Takeaways</h2>
+                    <p><strong>Personalization Increases User Engagement: </strong> Customizable features like
+                        font styles, backgrounds, and stickers helped users feel more connected to their journal
+                        entries.<br>
+                        <br>
+                        <strong> Consistent Design System Enhances Trust:</strong> A unified visual system made the
+                        app feel more polished and reliable across all pages.<br>
+                        <br>
+                        <strong> User-Centered Design Outperforms Assumptions:</strong> Designs that were guided by
+                        actual
+                        user feedback worked better than those based solely on personal preference.<br>
+                        <br>
+                        <strong> CA/B Testing Validates Design Decisions:</strong> Side-by-side testing of design
+                        variations
+                        helped confirm which version users preferred before making final changes.<br>
+                        <br>
+                        <strong>Small UI Tweaks Have Big Impact:</strong> Adjustments like improved button
+                        placements and spacing improved overall usability and aesthetics.
+                    </p>
+
+                    <h2>Final Thoughts</h2>
+                    <p>Redesigning Penzu taught me how UI/UX isn’t just about looks — it’s about improving the user’s
+                        emotional experience.
+
+                        <br>The process made me more confident in using user-centered design practices and gathering
+                        meaningful feedback.<br>
+
+                        I realized that good design is iterative, not a one-time job.<br><br>
+
+                    </p>
+
+                    <h2>Future Improvements</h2>
+                    <p>
+                        <strong> data export/backup features:</strong>
+                        Add data export/backup features for better journaling security.<br><br>
+                        <strong> voice-to-text :</strong>
+                        Introduce voice-to-text journaling support.<br><br>
+                        <strong> mobile responsiveness:</strong>
+                        Improve mobile responsiveness for a smoother experience on different devices.<br><br>
+                        <strong> Implement AI-Powered writing prompts:</strong>
+                        Explore AI-powered writing prompts for users with writer’s block.<br><br>
+
+                        <strong> dark mode :</strong>Add a dark mode option for nighttime writing.<br><br>
+
+                    </p>
+                </div>
+                </p>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

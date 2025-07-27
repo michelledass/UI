@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Navbar</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Poppins font to the entire body */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        /* Background image container */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75%;
+            background: url("project1images/Thumbnail.jpg") no-repeat center center/cover;
+            z-index: -1;
+        }
+
+        /* Style for the navbar container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
+            position: relative;
+            width: 100%;
+            background: transparent;
+        }
+
+        /* Style for buttons */
+        .left-button,
+        .right-button {
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        .left-button:hover,
+        .right-button:hover {
+            opacity: 0.8;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style for the right buttons container */
+        .right-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Container below the image */
+
+        .container {
+            display: flex;
+
+            align-items: left;
+            /* Vertically center the text */
+            width: 100%;
+
+        }
+
+        .section {
+            padding: 50px;
+            margin-top: 20px;
+        }
+
+
+        .section h4 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+
+        }
+
+        .section p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #555;
+            /* Text color */
+        }
+
+        /* At-a-Glance Section */
+        .at-a-glance {
+            margin-top: 30%;
+            text-align: left;
+
+            padding-left: 200px;
+            /* Add padding to the left */
+            padding-right: 200px;
+
+        }
+
+
+        .at-a-glance h2 {
+            font-size: 2em;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        .at-a-glance h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .at-a-glance p {
+            margin: 10px 0 0;
+            font-size: 1em;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar {
+                padding: 20px 30px;
+            }
+
+            .at-a-glance {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .at-a-glance {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .container {
+                flex-direction: column;
+                /* Stack items vertically on smaller screens */
+            }
+
+            .section {
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .right-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .at-a-glance {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px;
+            }
+
+            .at-a-glance {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section {
+                padding: 10px;
+                text-align: left;
+            }
+
+            .right-buttons {
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-image"></div>
+
+    <div class="navbar">
+        <button class="left-button">Dalrine</button>
+        <div class="right-buttons">
+            <button class="right-button">About</button>
+            <button class="right-button">Projects</button>
+            <button class="right-button">Resume</button>
+        </div>
+    </div>
+
+    <div class="at-a-glance">
+        <div>
+            <h2>At-a-Glance</h2>
+            <p><strong>Project Type:</strong> Website Redesign</p>
+            <p><strong>Focus:</strong> Enhancing user experience on the bookshop’s online platform.</p>
+            <p><strong>Primary Goal:</strong> Improve navigation, simplify checkout, and modernize the visual design for
+                better user engagement.</p>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h3>Timeline</h3>
+                <p>4 Months</p>
+            </div>
+            <div class="section">
+                <h3>My Role</h3>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="section">
+                <h3>Platform</h3>
+                <p>Figma</p>
+            </div>
+        </div>
+        <div>
+            <h2>Problem</h2>
+            <p>
+                <strong>1. </strong> Unclear Navigation: Users struggled to find books quickly due to poor
+                categorization.
+            </p>
+
+            <p> <strong>2. </strong>Overwhelming Homepage: A cluttered homepage with too many options.</p>
+            <p> <strong>3. </strong>Slow Checkout Process: The checkout experience was lengthy and confusing, leading to
+                cart
+                abandonment.</p>
+            <p> <strong>4. </strong>Outdated Visual Design: The website looked old-fashioned and didn’t appeal to modern
+                book
+                shoppers.
+            </p>
+        </div>
+        <div>
+            <h2>Solution</h2>
+            <p> <strong>1. </strong>Simplified Navigation: Clear categories and a robust search functionality.</p>
+            <p> <strong>2. </strong>Streamlined Checkout: Reduced the number of steps to complete a purchase and
+                simplified
+                the
+                forms.
+            </p>
+            <p> <strong>3. </strong>Modern Visual Design: A clean and modern aesthetic to enhance the browsing
+                experience.
+                </li>
+            <p> <strong>4. </strong>Personalization: Personalized book recommendations based on user behavior.</li>
+            </p>
+            <br>
+            <br>
+
+            <p>Before diving into my design process, here’s a direct look at the redesign: a streamlined bookshop
+                experience with a centralized dashboard featuring a home page, intuitive navbar with dropdowns, a
+                shopping page, checkout, and a seamless cart system.
+            </p>
+            <br>
+            <br>
+
+            <video controls width="90%">
+                <source src="project1images/prototype1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div>
+            <h2>Process</h2>
+            <img src="project1images/Process.png" alt="Process" width="98%">
+        </div>
+        <div>
+            <h2>Persona</h2>
+            <img src="project1images/persona.png" alt="Persona" width="98%">
+
+        </div>
+        <div>
+            <h2>User Journey Map</h2>
+            <img src="project1images/user Journey Map.png" alt="User Journey Map" width="98%">
+        </div>
+        <div>
+            <h2>Paper First</h2>
+            <p>Initial sketches and wireframes to define key features, such as simplified categories and
+                product
+                pages</p>
+            <img src="project1images/paperprototype.png" alt="Paper ProtoType" width="98%">
+        </div>
+        <div>
+            <h2> From Paper to Digital</h2>
+            <p>
+                Using Figma, paper sketches were converted into wireframes and later into high-fidelity
+                prototypes
+            </p>
+            <h3>Wireframes</h3>
+            <img src="project1images/wireframe.png" alt="Wireframes" width="98%">
+            <h3>High-fidelity</h3>
+            <br>
+            <img src="project1images/highfidelity.png" alt="high-fidelity ProtoType" width="98%">
+
+        </div>
+
+        <div>
+            <h2>Design System</h2>
+            <P>
+            <ul>
+                <li> <strong>Color Palette:</strong> Warm, inviting tones.<br>
+
+                    Warm & Earthy: The orange and green create a natural, cozy, and grounded feeling.<br>
+
+
+                    Soft & Inviting: The pinkish-cream adds a warm, neutral softness that avoids harsh
+                    contrasts. <br>
+
+                    Balanced Contrast: This harmony provides visual interest without being too aggressive,
+                    making it perfect for a bookshop website.<br>
+
+                    <br>
+                    <strong>Split Complementary</strong>
+                    #8A9A5B (Olive Green) and #D35400 (Burnt Orange) are close to being split complements on the
+                    color
+                    wheel. #F4EAE0 (Soft Creamy Pink) acts as a neutral balancing color, making it a soft split
+                    complementary palette rather than a high-contrast one.<br>
+                </li><br>
+
+
+                <li> <strong>Typography:</strong>
+                    Poppins is a clean, modern sans-serif font that balances elegance and readability</li><br>
+
+                <li><strong> Icons & Imagery:</strong> High-quality book cover previews and interactive buttons.<br>
+                </li>
+            </ul>
+            </p>
+            <div>
+                <h2>Design Changes</h2>
+                <img src="project1images/compair.png" alt="BEFORE AND AFTER" width="98%">
+            </div>
+            <div>
+                <h2>User Testing (A/B Testing for Redesign)</h2>
+                <p>To evaluate the effectiveness of the redesigned bookshop website, i conducted A/B testing with 5+
+                    users.
+                    The goal was to compare the current design (Control) with the redesigned version (Variant) to
+                    measure
+                    improvements in user experience, engagement, and conversion.<br>
+                    <br>
+                    <strong> Test Scenarios:</strong><br>
+                    <br>
+                    <strong> Homepage Layout:</strong> Testing user interaction with the new homepage design, including
+                    product
+                    recommendations, genres, and search options.<br>
+
+                    <strong>Product Page Navigation : </strong>Comparing how easily users could find books and product
+                    details
+                    on the new
+                    design.<br>
+
+                    <strong>Checkout Flow :</strong> Evaluating whether the redesigned, simplified checkout process
+                    reduced the time and
+
+                    steps for completing a purchase.<br>
+                </p>
+
+                <h3>Key Findings from A/B Testing:</h3>
+                <p>
+                <ul>
+
+                    <li>The new layout resulted in a 15% increase in time spent on the homepage and a 10%
+                        improvement in engagement with recommended books.</li>
+
+                    <li>users found the new layout easier to navigate and faster to
+                        find specific books.</li>
+                    <li>users experienced a 20% decrease in cart abandonment rates and a 25%
+                        increase in completed purchases compared to the Control group.</li>
+                </ul>
+                </p>
+                <h2>Key Takeaways</h2>
+                <p><strong>Minimalistic Design Improves Usability: </strong> The simplified design led to better user
+                    navigation, with
+                    clearer information and fewer distractions.<br>
+                    <br>
+                    <strong> Personalized Suggestions Matter:</strong> Users preferred the curated book recommendations
+                    on the homepage,
+                    leading to more time spent browsing and higher engagement.<br>
+                    <br>
+                    <strong> Faster Checkout Boosts Conversion Rates:</strong> The streamlined, guest-friendly checkout
+                    significantly
+                    improved the purchasing flow, reducing friction in the final stages of the user journey.
+                </p>
+
+                <h2>Final Thoughts</h2>
+                <p>The A/B testing results demonstrate that the redesigned bookshop website increased user engagement,
+                    improved navigation, and enhanced the checkout experience, making book shopping easier and more
+                    enjoyable.</p>
+
+                <h2>Future Improvements</h2>
+                <p><strong> Implement AI-Powered Recommendations:</strong> By leveraging machine learning, we can offer
+                    even more
+                    personalized book recommendations to further increase engagement.<br>
+                    <br>
+                    <strong> Expand to Audiobooks & E-books:</strong> Introducing digital formats to cater to diverse
+                    user preferences and
+                    increase the product offering.
+                </p>
+            </div>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
